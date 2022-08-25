@@ -1,0 +1,7 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: linear-gradient($color2, $color1);
+    @include bouton;
+}

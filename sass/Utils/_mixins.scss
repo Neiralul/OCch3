@@ -1,0 +1,16 @@
+@mixin bouton {
+    color: white;
+    border-radius: 30px;
+    width: 200px;
+    height: fit-content;
+    padding: 15px 0px;
+    text-decoration: none;
+}
+
+@mixin numero {
+    color: white;
+    background-color: $color1;
+    border-radius: 50%;
+    position: relative;
+    right: 10px;
+}

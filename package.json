@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neiralul/OCch3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neiralul/OCch3/issues"
+  },
+  "homepage": "https://github.com/Neiralul/OCch3#readme",
+  "dependencies": {
+    "sass": "^1.54.5"
+  }
+}
