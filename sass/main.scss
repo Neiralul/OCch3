@@ -2,6 +2,10 @@
 @import "./utils/mixins";
 @import "./composants/components";
 
+a {
+@include link;
+}
+
 .btn {
     display: flex;
     justify-content: center;
@@ -74,4 +78,39 @@ footer {
             }
         }
     }
+}
+.card {
+    @include card;
+    .vign {
+        @include vignette;
+        img {
+            @include image;
+        }
+    }
+    p {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    strong {
+        position: relative;
+        bottom: 10px;
+    }
+    .adjust {
+        position: relative;
+        bottom: 20px;
+    }
+}
+.new {
+    border-radius: 3px;
+    padding: 5px;
+    color: darken($color3, 40%);
+    background-color: $color3;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+    position: relative;
+    bottom: 160px;
+    left: 270px;
+}
+.resto {
+    display: flex;
+    flex-direction: column;
 }

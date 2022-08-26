@@ -1,0 +1,66 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./composants/components";
+
+body {
+    max-width: 450px;
+}
+section {
+    background-color: $bgcolor;
+    display: flex;
+    flex-direction: column;
+}
+.carte {
+    position: relative;
+    bottom: 50px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-bottom: -50px;
+}
+
+footer {
+    background-color: darken($bgcolor, 60%);
+    color: white;
+    padding: 15px 0px;
+    strong {
+        margin: 10px 40px;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            margin: 5px 0px;
+            .deco{
+                margin-right: 8px;
+            }
+            .fa-utensils {
+                margin-right: 12px;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.choix {
+    @include option;
+    .prix {
+        position: relative;
+        bottom: 18px;
+        left: 300px;
+    }
+    p {
+        position: relative;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: linear-gradient($color2, $color1);
+    @include bouton;
+}
