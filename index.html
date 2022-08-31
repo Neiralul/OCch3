@@ -3,13 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/styles.css" />
         <script src="https://kit.fontawesome.com/7af681b6c6.js" crossorigin="anonymous"></script>
         <title>Ohmyfood</title>
     </head>
     <body>
-        <!-- Logo + Bouton Précédent -->
+        <!-- Logo -->
         <header>
             <img src="images/logo/Ohmyfood.png" alt="logo Ohmyfood" />
         </header>
@@ -18,10 +19,12 @@
             <div class="lieu">
                 <i class="fa-solid fa-location-dot"></i> Paris, Belleville 
             </div>
-            <div>
+            <div class="top">
                 <p>
                     <strong>Réservez le menu qui vous convient</strong><br />
-                    Découvrez des restaurants d'exception, séléctionnés par nos soins.
+                    <br />
+                    Découvrez des restaurants d'exception, séléctionnés par nos soins. <br />
+                    <br />
                 </p>
                 <a href="#" class="btn">
                     Explorer nos restaurants
@@ -32,17 +35,17 @@
         <section class="bg2">
             <h1>Fonctionnement</h1>
             <a href="#" class="info">
-                <i class="fa-solid fa-1 fa-sm num1"></i>
+                <span class="num">1</span>
                 <i class="fa-solid fa-mobile-screen-button deco"></i>
                 Choisissez un restaurant
             </a>
             <a href="#" class="info">
-                <i class="fa-solid fa-2 fa-sm num"></i>
+                <span class="num">2</span>
                 <i class="fa-solid fa-list deco"></i>
                 Composez votre menu
             </a>
             <a href="#" class="info">
-                <i class="fa-solid fa-3 fa-sm num"></i>
+                <span class="num">3</span>
                 <i class="fa-solid fa-store deco"></i>
                 Dégustez au restaurant
             </a>
@@ -52,52 +55,65 @@
             <h1>Restaurants</h1>
             <div class="card">
                 <a href="#">
-                    <div class="vign">
-                    <img src="images/restaurants/1.jpg" alt="Palette du goût" />
-                    </div>
+                    <span class="vign">
+                        <img src="images/restaurants/1.jpg" alt="Palette du goût" />
+                    </span>
                     <span class="new">Nouveau</span>
                     <p class="adjust">
                         <strong>La palette du goût</strong><br />
                         Ménilmontant
                     </p>
                 </a>
-                <i class="fa-solid fa-heart"></i>
+                <span class="hearts">
+                    <i class="fa fa-xl fa-heart heart1 adjust"></i>
+                    <i class="fa-regular fa-xl fa-heart heart2 adjust"></i>
+                </span>
             </div>
             <div class="card">
                 <a href="#">
-                    <div class="vign">
+                    <span class="vign">
                         <img src="images/restaurants/2.jpg" alt="La note enchantée" />
-                    </div>
+                    </span>
                     <span class="new">Nouveau</span>
                     <p class="adjust">
                         <strong>La note enchantée</strong><br />
                         Charonne
                     </p>
                 </a>
-                <i class="fa-solid fa-heart"></i>
+                <span class="hearts">
+                    <i class="fa fa-xl fa-heart heart1 adjust"></i>
+                    <i class="fa-regular fa-xl fa-heart heart2 adjust"></i>
+                </span>
             </div>
             <div class="card">
                 <a href="#">
-                    <div class="vign">
+                    <span class="vign">
                         <img src="images/restaurants/3.jpg" alt="À la française" />
-                    </div>
+                    </span>
                     <p>
                         <strong>À la française</strong><br />
                         Cité Rouge
                     </p>
                 </a>
-                <i class="fa-solid fa-heart"></i>
+                <span class="hearts">
+                    <i class="fa fa-xl fa-heart heart1"></i>
+                    <i class="fa-regular fa-xl fa-heart heart2"></i>
+                </span>
             </div>
             <div class="card">
                 <a href="#">
-                    <div class="vign">
+                    <span class="vign">
                         <img src="images/restaurants/4.jpg" alt="Le délice des sens" />
-                    </div>
+                    </span>
                     <p>
                         <strong>Le délice des sens</strong> <br />
                         Folie-Méricourt <br />
                     </p>                
                 </a>
+                <span class="hearts">
+                    <i class="fa fa-xl fa-heart heart1"></i>
+                    <i class="fa-regular fa-xl fa-heart heart2"></i>
+                </span>
             </div>
         </section>
         <footer>

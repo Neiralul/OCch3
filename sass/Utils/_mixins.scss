@@ -1,3 +1,4 @@
+/* mixin générale */
 @mixin link {
     text-decoration: none;
     color: black;
@@ -6,22 +7,26 @@
 @mixin bouton {
     color: white;
     border-radius: 30px;
-    width: 350px;
+    width: fit-content;
     height: fit-content;
-    padding: 20px 0px;
+    padding: 12px 25px;
     text-decoration: none;
 }
+@mixin ombre {
+    box-shadow: 3px 3px 10px grey;
+}
 
+/*mixin page principale */
 @mixin numero {
     color: white;
     background-color: $color1;
     border-radius: 50%;
     position: relative;
-    right: 10px;
+    right: 12px;
 }
 
 @mixin card {
-    max-width: 350px;
+    max-width: 320px;
     max-height: 250px;
     background-color: white;
     border-radius: 20px;
@@ -29,19 +34,19 @@
 }
 
 @mixin vignette {
-    max-width: 350px;
+    max-width: 320px;
     max-height: 175px;
     overflow: hidden;
 }
 @mixin image {
-    max-width: 400px;
+    max-width: 370px;
     overflow: hidden;
     position: relative;
     object-position: -50px;
 }
-@mixin coeur {
-    color: linear-gradient($color2, $color1)
-}
+
+/* mixin page restaurants */
+
 @mixin option {
     width: 350px;
     height: 60px;
