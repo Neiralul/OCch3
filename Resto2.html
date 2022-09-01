@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/Resto1.css" />
         <script src="https://kit.fontawesome.com/7af681b6c6.js" crossorigin="anonymous"></script>
@@ -12,14 +13,21 @@
         <!-- Logo + Bouton Précédent -->
         <header>
             <img src="images/logo/Ohmyfood.png" alt="logo Ohmyfood" />
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
         </header>
-        <section>
-            <img src="images/restaurants/2.jpg" alt="La note enchantée" />
+        <section class="photo">
+            <img src="images/restaurants/2.jpg" alt="La note enchantée" class="note" />
         </section>
         <section class="carte">
             <h1>La note enchantée</h1>
+            <span class="hearts">
+                <i class="fa fa-xl fa-heart heart1"></i>
+                <i class="fa-regular fa-xl fa-heart heart2"></i>
+            </span>
             <article>
-                Entrées
+                <span class=cat>Entrées</span>
                 <div class="choix">
                     <p>
                         <strong>Ravioles de foie gras</strong><br />
@@ -50,7 +58,7 @@
                 </div>
             </article>
             <article>
-                Plats
+                <span class=cat>Plats</span>
                 <div class="choix">
                     <p>
                         <strong>Noix de coquilles Saint-Jacques</strong><br />
@@ -74,7 +82,7 @@
                 </div>
             </article>
             <article>
-                Desserts
+                <span class=cat>Desserts</span>
                 <div class="choix">
                     <p>
                         <strong>Macaron noisette et chocolat</strong><br />

@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/Resto1.css" />
         <script src="https://kit.fontawesome.com/7af681b6c6.js" crossorigin="anonymous"></script>
@@ -12,14 +13,21 @@
         <!-- Logo + Bouton Précédent -->
         <header>
             <img src="images/logo/Ohmyfood.png" alt="logo Ohmyfood" />
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
         </header>
-        <section>
+        <section class="photo">
             <img src="images/restaurants/3.jpg" alt="À la française" />
         </section>
         <section class="carte">
             <h1>À la française</h1>
+            <span class="hearts">
+                <i class="fa fa-xl fa-heart heart1"></i>
+                <i class="fa-regular fa-xl fa-heart heart2"></i>
+            </span>
             <article>
-                Entrées
+                <span class=cat>Entrées</span>
                 <div class="choix">
                     <p>
                         <strong>Tartare de poulpe acidulé</strong><br />
@@ -43,7 +51,7 @@
                 </div>
             </article>
             <article>
-                Plats
+                <span class=cat>Plats</span>
                 <div class="choix">
                     <p>
                         <strong>Coquilles Saint-Jacques</strong><br />
@@ -67,7 +75,7 @@
                 </div>
             </article>
             <article>
-                Desserts
+                <span class=cat>Desserts</span>
                 <div class="choix">
                     <p>
                         <strong>Pétales de violettes glacés</strong><br />

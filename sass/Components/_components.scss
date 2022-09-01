@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    align-self: center;
     background-image: linear-gradient($color2, $color1);
+    margin-bottom: 30px;
     @include bouton;
+    @include ombre;
 }

@@ -1,66 +1,80 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./components/components";
+@import "./Layout/layout";
 
 body {
-    max-width: 450px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.photo {
+    width: 100%;
+    max-height: 300px;
+}
+.note {
+    position: relative;
+    object-position: 0px -80px;
 }
 section {
     background-color: $bgcolor;
     display: flex;
     flex-direction: column;
 }
+
 .carte {
     position: relative;
     bottom: 50px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    padding-bottom: 30px;
     margin-bottom: -50px;
-}
-
-footer {
-    background-color: darken($bgcolor, 60%);
-    color: white;
-    padding: 15px 0px;
-    strong {
-        margin: 10px 40px;
-    }
-    ul {
-        list-style-type: none;
-        li {
-            margin: 5px 0px;
-            .deco{
-                margin-right: 8px;
-            }
-            .fa-utensils {
-                margin-right: 12px;
-            }
-            a {
-                text-decoration: none;
-                color: white;
-            }
-        }
+    h1 {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 28px;
+        font-weight:normal;
+        margin-top: 30px;
+        padding-left: 20px;
     }
 }
-
+article {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    .cat {
+        width: 40px;
+        margin: 0px 0px 20px 20px;
+        padding-bottom: 4px;
+        border-bottom: 3px solid $color3;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+}
 .choix {
     @include option;
+    @include ombre;
+    align-self: center;
     .prix {
         position: relative;
         bottom: 18px;
-        left: 300px;
+        left: 270px;
+        font-size: 13px;
     }
     p {
         position: relative;
-        font-size: 14px;
+        font-size: 13px;
         margin-left: 10px;
+        strong {
+            font-size: 15px;
+            font-weight: bold;
+        }
     }
 }
-
-.btn {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background-image: linear-gradient($color2, $color1);
-    @include bouton;
+.hearts {
+    position: relative;
+    bottom: 45px;
+    left: 290px;
+    .heart1 {
+        position: relative;
+        left: 28px;
+    }
 }
