@@ -5,6 +5,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 a {
 @include link;
@@ -15,6 +17,8 @@ a {
     background-color: $bgcolor;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-self: center;
     .lieu {
         background-color: darken($bgcolor, 5%);
         border-top: 2px solid darken($bgcolor, 10%);
@@ -42,6 +46,15 @@ a {
         }
     }
 }
+.haut {
+    @media (min-width: 850px) {
+        width: 50%;
+        max-width: 500px;
+        overflow: hidden;
+        border-radius: 30px;
+        @include ombre;
+    }
+}
 .num {
     @include numero;
     font-size: 12px;
@@ -55,6 +68,10 @@ a {
     h1 {
         align-self: flex-start;
         padding: 2% 0% 1% 5%;
+        @media (min-width: 850px) {
+            align-self: center;
+            padding: 40px 0px;
+        }
     }
 }
 .info {
@@ -134,5 +151,18 @@ a {
     h1 {
         align-self: flex-start;
         padding: 2% 0% 1% 5%;
+        @media (min-width: 850px) {
+            align-self: center;
+            padding: 2% 40% 3% 40%;
+        }
+    }
+    @media (min-width: 850px) {
+        width: 90%;
+        max-width: 900px;
+        flex-flow: row wrap;
+        border-radius: 30px;
+        justify-content: space-evenly;
+        @include ombre;
+        margin-bottom: 50px;
     }
 }
