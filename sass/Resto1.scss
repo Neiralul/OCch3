@@ -3,6 +3,18 @@
 @import "./components/components";
 @import "./Layout/layout";
 
+$nombrechoix: 9;
+$anim-dur: 1500ms;
+$anim-delay: calc($anim-dur / $nombrechoix);
+
+@keyframes apparition{
+    0% {
+        translate: 0px;
+    }
+    100% {
+        opacity: -100px;
+    }
+}
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -49,24 +61,52 @@ article {
         font-size: 15px;
     }
 }
+
 .choix {
     @include option;
     @include ombre;
     align-self: center;
-    .prix {
-        position: relative;
-        bottom: 18px;
-        left: 270px;
-        font-size: 13px;
+    overflow: hidden;
+    &:hover .valide {
+        translate: -55px;
+    }
+    &:hover .prix {
+        translate: -40px;
+    }
+    &:hover p {
+        width: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
     p {
+        display: block;
         position: relative;
         font-size: 13px;
         margin-left: 10px;
+        width: 250px;
         strong {
             font-size: 15px;
             font-weight: bold;
         }
+    }
+    .prix {
+        display: inline-block;
+        position: relative;
+        bottom: 50px;
+        left: 270px;
+        font-size: 13px;
+        transition: translate 400ms ease-in-out;
+    }
+    .valide {
+        display: inline-block;
+        position: relative;
+        left: 300px;
+        bottom: 64px;
+        padding: 25px 20px;
+        background-color: $color3;
+        color: white;
+        transition: translate 500ms ease-in-out;
     }
 }
 .hearts {
