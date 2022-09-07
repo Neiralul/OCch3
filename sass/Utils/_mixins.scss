@@ -11,9 +11,15 @@
     height: fit-content;
     padding: 12px 25px;
     text-decoration: none;
+    filter: brightness(1);
+    transition: all 500ms ease-in;
+    &:hover {
+        filter: brightness(1.2);
+        box-shadow: 3px 3px 15px rgba(0,0,0,1);
+    }
 }
 @mixin ombre {
-    box-shadow: 3px 3px 10px grey;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
 }
 
 /*mixin page principale */

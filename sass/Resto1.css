@@ -71,19 +71,19 @@ footer ul li a {
 
 @-webkit-keyframes apparition {
   0% {
-    opacity: 0;
+    translate: 0px;
   }
   100% {
-    opacity: 1;
+    opacity: -100px;
   }
 }
 
 @keyframes apparition {
   0% {
-    opacity: 0;
+    translate: 0px;
   }
   100% {
-    opacity: 1;
+    opacity: -100px;
   }
 }
 body {
@@ -135,8 +135,6 @@ article .cat {
   border-bottom: 3px solid #99E2D0;
   text-transform: uppercase;
   font-size: 15px;
-  -webkit-animation: apparition 1500ms;
-          animation: apparition 1500ms;
 }
 
 .choix {
@@ -148,50 +146,48 @@ article .cat {
   background-color: white;
   box-shadow: 3px 3px 10px grey;
   align-self: center;
-  -webkit-animation: apparition 1500ms;
-          animation: apparition 1500ms;
+  overflow: hidden;
 }
-.choix .choix1 {
-  background-color: red;
+.choix:hover .valide {
+  translate: -55px;
 }
-.choix .choix2 {
-  background-color: red;
+.choix:hover .prix {
+  translate: -40px;
 }
-.choix .choix3 {
-  background-color: red;
-}
-.choix .choix4 {
-  background-color: red;
-}
-.choix .choix5 {
-  background-color: red;
-}
-.choix .choix6 {
-  background-color: red;
-}
-.choix .choix7 {
-  background-color: red;
-}
-.choix .choix8 {
-  background-color: red;
-}
-.choix .choix9 {
-  background-color: red;
-}
-.choix .prix {
-  position: relative;
-  bottom: 18px;
-  left: 270px;
-  font-size: 13px;
+.choix:hover p {
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .choix p {
+  display: block;
   position: relative;
   font-size: 13px;
   margin-left: 10px;
+  width: 250px;
 }
 .choix p strong {
   font-size: 15px;
   font-weight: bold;
+}
+.choix .prix {
+  display: inline-block;
+  position: relative;
+  bottom: 50px;
+  left: 270px;
+  font-size: 13px;
+  transition: translate 400ms ease-in-out;
+}
+.choix .valide {
+  display: inline-block;
+  position: relative;
+  left: 300px;
+  bottom: 64px;
+  padding: 25px 20px;
+  background-color: #99E2D0;
+  color: white;
+  transition: translate 500ms ease-in-out;
 }
 
 .hearts {

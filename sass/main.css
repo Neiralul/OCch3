@@ -213,15 +213,32 @@ a {
 .card .hearts {
   position: relative;
   bottom: 50px;
-  left: 240px;
-}
-.card .hearts .adjust {
-  position: relative;
-  bottom: 20px;
+  left: 230px;
 }
 .card .hearts .heart1 {
   position: relative;
-  left: 28px;
+  left: 38px;
+}
+
+.heart1 {
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  color: transparent;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.heart1:hover {
+  opacity: 1;
+}
+
+.heart2 {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.heart2:hover {
+  opacity: 0;
 }
 
 .new {

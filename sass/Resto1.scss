@@ -112,9 +112,26 @@ article {
 .hearts {
     position: relative;
     bottom: 45px;
-    left: 290px;
+    left: 275px;
+    max-width: 80px;
     .heart1 {
         position: relative;
-        left: 28px;
+        left: 38px;
+        background-clip: text;
+        background-image: linear-gradient($color1, $color2);
+        color: transparent;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 300ms;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .heart2 {
+        opacity: 1;
+        transition: opacity 300ms;
+        &:hover {
+            opacity: 0;
+        }
     }
 }

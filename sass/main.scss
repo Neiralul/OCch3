@@ -95,7 +95,6 @@ a {
         }
     }
 }
-
 .card {
     @include card;
     @include ombre;
@@ -119,20 +118,45 @@ a {
         position: relative;
         bottom: 20px;
     }
+    .hadjust {
+        position: relative;
+        bottom: 70px;
+        left: 230px;
+        .heart1 {
+            position: relative;
+            left: 38px;
+        }
+    }
     .hearts {
         position: relative;
         bottom: 50px;
-        left: 240px;
-        .adjust {
-            position: relative;
-            bottom: 20px;
-        }
+        left: 230px;
         .heart1 {
             position: relative;
-            left: 28px;
+            left: 38px;
         }
     }
 }
+
+.heart1 {
+    background-clip: text;
+    background-image: linear-gradient($color1, $color2);
+    color: transparent;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 300ms;
+    &:hover {
+        opacity: 1;
+    }
+}
+.heart2 {
+    opacity: 1;
+    transition: opacity 300ms;
+    &:hover {
+        opacity: 0;
+    }
+}
+
 .new {
     border-radius: 3px;
     padding: 5px;
