@@ -19,7 +19,13 @@
   height: fit-content;
   padding: 12px 25px;
   text-decoration: none;
-  box-shadow: 3px 3px 10px grey;
+  filter: brightness(1);
+  transition: all 500ms ease-in;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+.btn:hover {
+  filter: brightness(1.2);
+  box-shadow: 3px 3px 15px rgb(0, 0, 0);
 }
 
 header {
@@ -30,15 +36,19 @@ header {
 header img {
   width: 40%;
 }
+@media (min-width: 600px) {
+  header img {
+    max-width: 275px;
+  }
+}
 header a {
   color: black;
   text-decoration: none;
-  position: relative;
-  top: 3px;
-  right: 230px;
+  position: absolute;
+  left: 5%;
 }
 header i {
-  size: 15px;
+  font-size: 20px;
 }
 
 footer {
@@ -69,42 +79,43 @@ footer ul li a {
   color: white;
 }
 
-@-webkit-keyframes apparition {
-  0% {
-    translate: 0px;
-  }
-  100% {
-    opacity: -100px;
-  }
-}
-
-@keyframes apparition {
-  0% {
-    translate: 0px;
-  }
-  100% {
-    opacity: -100px;
-  }
-}
 body {
   font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .photo {
   width: 100%;
   max-height: 300px;
 }
-
-.note {
-  position: relative;
-  -o-object-position: 0px -80px;
-     object-position: 0px -80px;
+@media (min-width: 600px) {
+  .photo {
+    max-width: 500px;
+    overflow: hidden;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
 }
 
 section {
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 600px) {
+  section {
+    width: 500px;
+    align-self: center;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+@media (min-width: 920px) {
+  section {
+    width: 90%;
+    align-self: center;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .carte {
@@ -115,12 +126,60 @@ section {
   padding-bottom: 30px;
   margin-bottom: -50px;
 }
-.carte h1 {
+@media (min-width: 600px) {
+  .carte {
+    margin-bottom: 50px;
+    border-radius: 40px;
+  }
+}
+.carte .toprow {
+  margin: 20px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+@media (min-width: 920px) {
+  .carte .toprow {
+    width: 500px;
+    align-self: center;
+  }
+}
+.carte .toprow h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 28px;
   font-weight: normal;
-  margin-top: 30px;
-  padding-left: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 15px;
+}
+.carte .toprow .hearts {
+  margin-top: 22px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 25px;
+}
+.carte .toprow .hearts .heart1 {
+  position: relative;
+  left: 38px;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  color: transparent;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.carte .toprow .hearts .heart1:hover {
+  opacity: 1;
+}
+.carte .toprow .hearts .heart2 {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.carte .toprow .hearts .heart2:hover {
+  opacity: 0;
 }
 
 article {
@@ -130,7 +189,7 @@ article {
 }
 article .cat {
   width: 40px;
-  margin: 0px 0px 20px 20px;
+  margin: 0px 0px 20px 5%;
   padding-bottom: 4px;
   border-bottom: 3px solid #99E2D0;
   text-transform: uppercase;
@@ -138,13 +197,13 @@ article .cat {
 }
 
 .choix {
-  width: 320px;
+  width: 300px;
   height: 55px;
   padding: 5px;
   border-radius: 20px;
   margin-bottom: 20px;
   background-color: white;
-  box-shadow: 3px 3px 10px grey;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
   align-self: center;
   overflow: hidden;
 }
@@ -188,14 +247,4 @@ article .cat {
   background-color: #99E2D0;
   color: white;
   transition: translate 500ms ease-in-out;
-}
-
-.hearts {
-  position: relative;
-  bottom: 45px;
-  left: 290px;
-}
-.hearts .heart1 {
-  position: relative;
-  left: 28px;
 }/*# sourceMappingURL=Resto1.css.map */

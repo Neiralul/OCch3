@@ -7,30 +7,44 @@ $nombrechoix: 9;
 $anim-dur: 1500ms;
 $anim-delay: calc($anim-dur / $nombrechoix);
 
-@keyframes apparition{
-    0% {
-        translate: 0px;
-    }
-    100% {
-        opacity: -100px;
-    }
-}
+
 body {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .photo {
     width: 100%;
     max-height: 300px;
-}
-.note {
-    position: relative;
-    object-position: 0px -80px;
+    @media (min-width: 600px) {
+        width: 500px;
+        overflow: hidden;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    @media (min-width:1000px) {
+        overflow: hidden;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        width: 900px;
+        margin-top: 20px;
+        }
+    }
 }
 section {
     background-color: $bgcolor;
     display: flex;
     flex-direction: column;
+    @media (min-width:600px) {
+        width: 500px;
+        align-self: center;
+        @include ombre;
+    }
+    @media (min-width:1000px) {
+        width: 980px;
+        align-self: center;
+        @include ombre;
+    }
 }
 
 .carte {
@@ -40,12 +54,57 @@ section {
     border-top-right-radius: 40px;
     padding-bottom: 30px;
     margin-bottom: -50px;
-    h1 {
-        font-family: 'Shrikhand', sans-serif;
-        font-size: 28px;
-        font-weight:normal;
-        margin-top: 30px;
-        padding-left: 20px;
+    @media (min-width:600px) {
+        margin-bottom: 50px;
+        border-radius: 40px;
+    }
+    @media (min-width:1000px) {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    .toprow {
+        margin: 20px 0px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        @media (min-width: 1000px){
+            width: 500px;
+            align-self:center;
+            margin: 20px 200px;
+        }
+        h1 {
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 28px;
+            font-weight:normal;
+            width: fit-content;
+            padding-left: 15px;
+        }
+        .hearts {
+            margin-top: 22px;
+            width: fit-content;
+            padding-right: 25px;
+            .heart1 {
+                position: relative;
+                left: 38px;
+                background-clip: text;
+                background-image: linear-gradient($color1, $color2);
+                color: transparent;
+                padding: 10px;
+                opacity: 0;
+                transition: opacity 300ms;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .heart2 {
+                opacity: 1;
+                transition: opacity 300ms;
+                &:hover {
+                    opacity: 0;
+                }
+            }
+        }
     }
 }
 article {
@@ -54,11 +113,14 @@ article {
     padding-bottom: 20px;
     .cat {
         width: 40px;
-        margin: 0px 0px 20px 20px;
+        margin: 0px 0px 20px 5%;
         padding-bottom: 4px;
         border-bottom: 3px solid $color3;
         text-transform: uppercase;
         font-size: 15px;
+    }
+    @media (min-width:1000px){
+        width: 315px;
     }
 }
 
@@ -82,11 +144,11 @@ article {
     p {
         display: block;
         position: relative;
-        font-size: 13px;
+        font-size: 12px;
         margin-left: 10px;
         width: 250px;
         strong {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: bold;
         }
     }
@@ -94,44 +156,18 @@ article {
         display: inline-block;
         position: relative;
         bottom: 50px;
-        left: 270px;
+        left: 260px;
         font-size: 13px;
         transition: translate 400ms ease-in-out;
     }
     .valide {
         display: inline-block;
         position: relative;
-        left: 300px;
-        bottom: 64px;
+        left: 285px;
+        bottom: 60px;
         padding: 25px 20px;
         background-color: $color3;
         color: white;
         transition: translate 500ms ease-in-out;
-    }
-}
-.hearts {
-    position: relative;
-    bottom: 45px;
-    left: 275px;
-    max-width: 80px;
-    .heart1 {
-        position: relative;
-        left: 38px;
-        background-clip: text;
-        background-image: linear-gradient($color1, $color2);
-        color: transparent;
-        padding: 10px;
-        opacity: 0;
-        transition: opacity 300ms;
-        &:hover {
-            opacity: 1;
-        }
-    }
-    .heart2 {
-        opacity: 1;
-        transition: opacity 300ms;
-        &:hover {
-            opacity: 0;
-        }
     }
 }
