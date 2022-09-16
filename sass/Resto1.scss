@@ -145,13 +145,13 @@ article {
             animation-delay: 175ms * $i;
         }
     }
-    &:active .valide {
-        translate: -55px;
+    &:hover .valide {
+        transform: translate(-55px);
     }
-    &:active .prix {
-        translate: -40px;
+    &:hover .prix {
+        transform: translate(-40px);
     }
-    &:active p {
+    &:hover p {
         width: 200px;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -160,10 +160,10 @@ article {
 
     @media (min-width: 1000px) {
     &:hover .valide {
-        translate: -55px;
+        transform: translate(-55px);
     }
     &:hover .prix {
-        translate: -40px;
+        transform: translate(-40px);
     }
     &:hover p {
         width: 200px;
@@ -189,7 +189,7 @@ article {
         bottom: 50px;
         left: 260px;
         font-size: 13px;
-        transition: translate 400ms ease-in-out;
+        transition: transform 400ms ease-in-out;
     }
     .valide {
         display: inline-block;
@@ -199,6 +199,6 @@ article {
         padding: 25px 20px;
         background-color: $color3;
         color: white;
-        transition: translate 500ms ease-in-out;
+        transition: transform 500ms ease-in-out;
     }
 }
