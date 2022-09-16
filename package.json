@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/styles.css --style compressed --watch ./sass/resto1.scss:./css/resto1.css --style compressed"},
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css --style compressed --watch ./sass/resto1.scss:./css/resto1.css --style compressed",
+    "prefix1": "postcss ./css/styles.css --use autoprefixer -d ./css/",
+    "prefix2": "postcss ./css/resto1.css --use autoprefixer -d ./css/"},
 
   "repository": {
     "type": "git",
@@ -12,6 +14,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Neiralul/OCch3/issues"
   },

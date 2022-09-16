@@ -7,6 +7,15 @@ $nombrechoix: 9;
 $anim-dur: 1500ms;
 $anim-delay: calc($anim-dur / $nombrechoix);
 
+@keyframes app {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -86,13 +95,13 @@ section {
             padding-right: 25px;
             .heart1 {
                 position: relative;
-                left: 38px;
+                left: 33px;
                 background-clip: text;
                 background-image: linear-gradient($color1, $color2);
                 color: transparent;
-                padding: 10px;
+                padding: 10px 5px;
                 opacity: 0;
-                transition: opacity 300ms;
+                transition: opacity 500ms;
                 &:hover {
                     opacity: 1;
                 }
@@ -129,6 +138,27 @@ article {
     @include ombre;
     align-self: center;
     overflow: hidden;
+    opacity: 0;
+    animation: app 1750ms 100ms forwards;
+    @for $i from 1 through 10 {
+        &--#{$i}{
+            animation-delay: 175ms * $i;
+        }
+    }
+    &:active .valide {
+        translate: -55px;
+    }
+    &:active .prix {
+        translate: -40px;
+    }
+    &:active p {
+        width: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    @media (min-width: 1000px) {
     &:hover .valide {
         translate: -55px;
     }
@@ -141,6 +171,7 @@ article {
         overflow: hidden;
         white-space: nowrap;
     }
+}
     p {
         display: block;
         position: relative;
