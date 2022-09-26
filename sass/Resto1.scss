@@ -3,10 +3,6 @@
 @import "./components/components";
 @import "./Layout/layout";
 
-$nombrechoix: 9;
-$anim-dur: 1500ms;
-$anim-delay: calc($anim-dur / $nombrechoix);
-
 @keyframes app {
     0% {
         opacity: 0;
@@ -35,30 +31,30 @@ body {
     width: 100%;
     max-height: 300px;
     @media (min-width: 600px) {
-        width: 500px;
+        width: 90%;
         overflow: hidden;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
-    @media (min-width:1000px) {
+    }
+    @media (min-width:960px) {
         overflow: hidden;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
-        width: 900px;
+        width: 80%;
         margin-top: 20px;
         }
-    }
 }
 section {
     background-color: $bgcolor;
     display: flex;
     flex-direction: column;
     @media (min-width:600px) {
-        width: 500px;
+        width: 90%;
         align-self: center;
         @include ombre;
     }
-    @media (min-width:1000px) {
-        width: 980px;
+    @media (min-width:960px) {
+        width: 90%;
         align-self: center;
         @include ombre;
     }
@@ -75,7 +71,7 @@ section {
         margin-bottom: 50px;
         border-radius: 40px;
     }
-    @media (min-width:1000px) {
+    @media (min-width:960px) {
         flex-flow: row wrap;
         justify-content: space-evenly;
         margin-bottom: 20px;
@@ -85,10 +81,10 @@ section {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
-        @media (min-width: 1000px){
-            width: 500px;
+        @media (min-width: 960px){
+            width: 100%;
             align-self:center;
-            margin: 20px 200px;
+            margin: 20px;
         }
         h1 {
             font-family: 'Shrikhand', sans-serif;
@@ -99,7 +95,6 @@ section {
         }
         .hearts {
             margin-top: 22px;
-            width: fit-content;
             padding-right: 25px;
             .heart1 {
                 position: relative;
@@ -136,8 +131,8 @@ article {
         text-transform: uppercase;
         font-size: 15px;
     }
-    @media (min-width:1000px){
-        width: 315px;
+    @media (min-width:960px){
+        width: 30%;
     }
 }
 
@@ -145,8 +140,8 @@ article {
     @include option;
     @include ombre;
     align-self: center;
-    overflow: hidden;
     opacity: 0;
+    overflow: hidden;
     animation: app 1750ms 100ms forwards;
     @for $i from 1 through 10 {
         &--#{$i}{
@@ -157,35 +152,26 @@ article {
         display: block;
     }
     &:hover .valide {
-        transform: translate(-55px);
+        transform: translate(-130%);
         i {
             animation: tour 1s ease-in-out forwards;
         }
     }
     &:hover .prix {
-        transform: translate(-40px);
+        transform: translate(-200%);
     }
     &:hover p {
-        width: 200px;
+        width: 70%;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-    }
-
-    @media (min-width: 1000px) {
-    &:hover .valide {
-        transform: translate(-55px);
-    }
-    &:hover .prix {
-        transform: translate(-40px);
-    }
-    &:hover p {
-        width: 200px;
+        @media (min-width: 960px) {
+        width: 60%;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        }
     }
-}
     p {
         display: block;
         position: relative;
@@ -196,23 +182,34 @@ article {
             font-size: 14px;
             font-weight: bold;
         }
+        @media (min-width: 960px) {
+            width: 80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
     }
     .prix {
         display: inline-block;
         position: relative;
         bottom: 50px;
-        left: 260px;
+        left: 90%;
         font-size: 13px;
         transition: transform 400ms ease-in-out;
     }
     .valide {
         display: inline-block;
         position: relative;
-        left: 285px;
+        left: 100%;
         bottom: 60px;
         padding: 25px 20px;
         background-color: $color3;
         color: white;
         transition: transform 500ms ease-in-out;
+    }
+}
+.btn {
+    @media (min-width:960px) {
+        margin: 0% 40%;
     }
 }
