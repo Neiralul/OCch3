@@ -15,6 +15,14 @@ $anim-delay: calc($anim-dur / $nombrechoix);
         opacity: 1;
     }
 }
+@keyframes tour {
+    0% {
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
 
 
 body {
@@ -145,8 +153,14 @@ article {
             animation-delay: 175ms * $i;
         }
     }
+    i {
+        display: block;
+    }
     &:hover .valide {
         transform: translate(-55px);
+        i {
+            animation: tour 1s ease-in-out forwards;
+        }
     }
     &:hover .prix {
         transform: translate(-40px);
