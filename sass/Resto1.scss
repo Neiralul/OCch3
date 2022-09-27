@@ -13,10 +13,10 @@
 }
 @keyframes tour {
     0% {
-        rotate: 0deg;
+        transform: rotate(0deg);
     }
     100%{
-        rotate: 360deg;
+        transform: rotate(360deg);
     }
 }
 
@@ -158,10 +158,10 @@ article {
         }
     }
     &:hover .prix {
-        transform: translate(-200%);
+        transform: translate(-220%);
     }
     &:hover p {
-        width: 70%;
+        width: 60%;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -177,7 +177,10 @@ article {
         position: relative;
         font-size: 12px;
         margin-left: 10px;
-        width: 250px;
+        width: 80%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         strong {
             font-size: 14px;
             font-weight: bold;
